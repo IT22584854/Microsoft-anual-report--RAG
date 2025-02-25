@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+numpy
+pypdf
+python-dotenv
+chromadb
+sentence-transformers
+langchain
