@@ -6,3 +6,5 @@ python-dotenv
 chromadb
 sentence-transformers
 langchain
+pysqlite3-binary; sys_platform != "win32"
+

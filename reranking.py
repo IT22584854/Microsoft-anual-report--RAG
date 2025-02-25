@@ -1,3 +1,13 @@
+try:
+    # Attempt to import pysqlite3 to force its use in environments that need it.
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    # On Windows, pysqlite3-binary isn't installed, so we'll use the built-in sqlite3.
+    pass
+
+
 import streamlit as st
 import google.generativeai as genai
 import numpy as np
